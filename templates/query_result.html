@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cur.io</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .home-button {
+            display: inline-block;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #444;
+        }
+
+        .articles {
+            list-style: none;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #fff;
+            max-width: 90%;
+            margin: 20px auto;
+        }
+
+        .articles li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .articles li:last-child {
+            border-bottom: none;
+        }
+
+        .articles pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>cur.io</h1>
+        <a href="/" class="home-button">Home</a>
+        <div class="articles">
+            <pre>{{ result }}</pre>
+        </div>
+    </div>
+</body>
+</html>

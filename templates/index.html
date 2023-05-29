@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cur.io</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* view height, makes sure body takes up full screen height */
+    margin: 0; /* reset default body margin */
+}
+
+.center {
+    text-align: center;
+}
+
+
+        .articles {
+            list-style: none;
+            padding: 0;
+            border: 1px solid #333;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            overflow: auto;
+        }
+
+        .articles li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .articles li:last-child {
+            border-bottom: none;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        input[type="submit"] {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            width: 30%; /* Change this value to control the width of the input fields */
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+
+        <form method="POST" action="/query" enctype="multipart/form-data">
+            <input type="file" name="files" accept=".txt, .pdf" multiple>
+            <input type="text" name="query" placeholder="Enter your query">
+            <input type="submit" value="Query">
+        </form>
+        {% if result %}
+        <div class="articles">
+            <h3>Query Result:</h3>
+            <p>{{ result }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
