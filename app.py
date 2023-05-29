@@ -10,7 +10,7 @@ from io import BytesIO
 nltk.download('punkt')
 
 # Set up your Bard API credentials
-token = "WghY7VLriVQ-37Xdi2Zm0v_N9LIw5Xaej0aTkb0inB9_Uf-izbmnLdTGMOzPn0Objy8hgw."
+token = "..."
 
 app = Flask(__name__)
 
