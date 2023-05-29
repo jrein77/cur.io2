@@ -55,7 +55,7 @@ starlette==0.20.4
 sympy==1.12
 threadpoolctl==3.1.0
 tokenizers==0.13.3
-torch==2.0.1
+torch
 torchvision==0.15.2
 tqdm==4.65.0
 transformers==4.29.2
